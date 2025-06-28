@@ -1,43 +1,86 @@
 #include <iostream>
 using namespace std;
 int main() {
-    /// a soni berilgan. Shu sonni tublikga tekshiring. Agar tub bo'lsa true,
-    /// aks holda false chiqsin.
+    /// A Dan B gacha tub sonlar ekranga chiqarish
     /*
-    int a; cout << "Enter a number: "; cin >> a;
-    int tub = 0;
-    for (int i = 1; i <= a; i++) {
-        if ( a%i == 0) {
-            cout << i << " ";tub++;
-        }
-    }
-    if (tub == 2) {
-        cout << "\n True" <<endl;
-    } else cout << "\n False" <<endl;
-*/
-    /// a va b soni berilgan. Agar 2 lasi ham tub bo'lsa ularni summasini,
-    /// aks holda ko'paytmasini chiqaring.
-/*
-    int a, b;
-    cout << "Enter two integers: ";
-    cin >> a >> b;
-    int tubA = 0;
-    int tubB = 0;
-    for (int i=1; i<=a; i++) {
-        if (a%i==0) {
-            cout<<i<<" ";tubA++;
-        }
-    }
-    for (int i=1; i<=b; i++) {
-        if (b%i==0) {
-            cout<<i<<" ";tubB++;
-        }
-    }
-    if ( tubA==2 && tubB==2 ) cout<<" \n ikkisi ham tub "<< a+b<<endl;
-    else if (tubA!=2 && tubB==2) cout<<"\n birinchi son tub emas va boshqasi tub "<< a*b<<endl;
-    else if (tubA==2 && tubB!=2) cout<<"\n birinchi son tub va boshqasi tub emas "<< a*b<<endl;
-    else if (tubA!=2 && tubB!=2) cout<<"\n ikkisi ham juft "<< a << " va "<< b<<endl;
-*/
+    for (int i = 50; i <= 100; i++) {
+       int sanoq=0;
+       for (int j = 1; j <= i; j++) {
+           if (i % j == 0) sanoq++;
+       }
+       if (sanoq ==2) cout << i << " ";
+   }
+   */
 
+    /*
+    /// Sonning necha xonali ekanini topish
+    int son; cout << "Enter a number: "; cin >> son;
+    int sanoq=0;
+    while(true) {
+        son = son /10;
+        ++sanoq;
+        if(son==0) break;
+    }
+    cout << " Natija: "<< sanoq << " xonali son"<< endl;
+    */
+
+    /// Sonning juft raqamlarini topish
+    /*
+    int son,birlar;
+    cout<<" Enter a number: "; cin>>son;
+    int sanoq=0;
+    while(true) {
+        birlar=son % 10;
+        if ( son % 2 == 0) ++sanoq;
+        son/=10;
+        if (son == 0) break;
+    } cout << " bu sonda "<<sanoq <<" ta juft son bor"<< endl;
+    */
+
+    /// Sonlar kiritish va 0 kirtilganda to'xtash, va ungacha nechta son kiritilganini sanash
+    /*
+    int son, sanoq;
+
+    while(true) {
+        cout<< "Sonni kiriting: "; cin >> son;
+        if ( son == 0 ) break;
+        ++sanoq;
+    } cout << "Natija : "<< sanoq << endl;
+    */
+
+    /// Faqat 50 Dan katta sonlar yig'indisini topish
+    /*
+    int son, summa;
+    while ( true) {
+        cout<< " Enter a number: "; cin >> son;
+        if (son == 0) break;
+        if ( son> 50) summa+=son;
+    }  cout << "Natija : "<< summa << endl;
+    */
+
+    /// Sonlar ichida 5 raqami borligini aniqlash
+    /*
+    int son, birlar;
+    cout<<"Please enter a number: "; cin>>son;
+    int sanoq=0;
+    while (true) {
+        birlar = son % 10;
+        if (birlar == 5) ++sanoq;
+        son/=10;
+        if (son==0) break;
+    } if (sanoq>0) cout<< " 5 raqami mavjud \n";
+    else cout<< " 5 raqami mavjud emas \n";
+    */
+    /*
+    /// Berilgan son 3 Ning darajasi yoki yo'qligini aniqlash
+    int n;
+    cout << "Enter a number: "; cin >> n;
+    int i=1;
+    while (n > i) {
+        i*=3;
+    } if ( i==n) cout << " 3 ning darajasi \n";
+    else cout << " 3 ning darajasi emas \n";
+    */
+    
     return 0;
 }
